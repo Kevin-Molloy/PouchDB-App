@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Offline Movies</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Offline FirstPouchDB</h1>
+  <p>Status: <span id="sync-status" class="status">Starting...</span></p>
+
+  <label>
+    Search
+    <input id="search-input" type="search" placeholder="Title, actor, or genre">
+  </label>
+  <label>
+    CouchDB URL
+    <input id="remote-url" type="url" value="http://localhost:5984/schema-a">
+  </label>
+  <button id="connect-button" type="button">Connect</button>
+  <button id="refresh-button" type="button">Refresh</button>
+
+  <h2 id="form-heading">Add movie</h2>
+  <form id="movie-form">
+    <label>Title <input id="title" name="title" required></label>
+    <label>Actors <input id="actors" name="actors"></label>
+    <label>Genres <input id="genres" name="genres"></label>
+    <label>ID <input id="movie-id" name="movie-id"></label>
+    <p id="form-error" role="alert"></p>
+    <button id="save-button" type="submit">Add movie</button>
+    <button id="cancel-edit" class="hidden" type="button">Cancel</button>
+  </form>
+
+  <h2>Movies (<span id="movie-count">0</span>)</h2>
+  <p id="empty-state">No movies found.</p>
+  <div id="movie-list"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/pouchdb@9.0.0/dist/pouchdb.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

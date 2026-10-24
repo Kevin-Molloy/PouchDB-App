@@ -1,0 +1,44 @@
+body {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font: 16px Arial, sans-serif;
+}
+
+label {
+  display: block;
+  margin: .5rem 0;
+}
+
+input {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  padding: .4rem;
+}
+
+button {
+  margin: .25rem .25rem .75rem 0;
+  padding: .4rem .7rem;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.movie {
+  border-top: 1px solid #ccc;
+  padding: .75rem 0;
+}
+
+.movie h3 {
+  margin: 0 0 .35rem;
+}
+
+.movie-actions {
+  margin-top: .5rem;
+}
